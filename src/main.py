@@ -3,6 +3,7 @@ import random
 import time
 import select
 import sys
+import os
 from bs4 import BeautifulSoup
 
 chars = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","0","1","2","3","4","5","6","7","8","9"]
@@ -71,7 +72,7 @@ def main():
             ConnectToProxy(Plist[elem])
             elem += 1
 
-            if elem >= 10:
+            if elem >= len(Plist):
                 elem = 0
 
             i = 0
@@ -85,5 +86,9 @@ def main():
 
         i += 1
         time.sleep(0.5)
+
+
+if not os.path.exists("img"):
+    os.makedirs("img")
 
 main()
