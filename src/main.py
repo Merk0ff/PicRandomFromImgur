@@ -46,7 +46,7 @@ def GetImg( url ):
 def LoadProxy():
     list = []
 
-    with open("proxy.list", "r") as file:
+    with open("./src/proxy.list", "r") as file:
         for line in file:
             list.append(line[0:-2])
 

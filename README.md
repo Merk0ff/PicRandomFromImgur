@@ -5,11 +5,11 @@
 ### Установка
 
 ```
-python setup.py install
+python3 setup.py install
 ```
 
 ## Запуск
 
 ```
-python \src\main.py
+python3 ./src/main.py
 ```
