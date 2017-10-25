@@ -66,7 +66,7 @@ def main():
     Plist = LoadProxy()
     ConnectToProxy(Plist[0])
 
-    while not select.select([sys.stdin,],[],[],0.0)[0]:
+    while not False:
 
         if i >= 3:
             ConnectToProxy(Plist[elem])
