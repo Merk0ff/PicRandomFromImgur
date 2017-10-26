@@ -1,8 +1,6 @@
 import urllib.request
 import random
 import time
-import select
-import sys
 import os
 from bs4 import BeautifulSoup
 
@@ -68,7 +66,7 @@ def main():
 
     while not False:
 
-        if i >= 3:
+        if i >= 10:
             ConnectToProxy(Plist[elem])
             elem += 1
 
@@ -85,7 +83,7 @@ def main():
                 file.write(url + "\n")
 
         i += 1
-        time.sleep(0.5)
+        time.sleep(0.1)
 
 
 if not os.path.exists("img"):
